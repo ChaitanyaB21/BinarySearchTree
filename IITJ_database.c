@@ -3,7 +3,7 @@
 
 struct Node
 {
-    // char name;
+    
     int weight;
     struct Node *left;
     struct Node *right;
@@ -68,9 +68,7 @@ void Insert(int weight)
 
     if (root == NULL)
     {
-        // p = (struct Node *)malloc(sizeof(struct Node));
-        // p->weight = weight;
-        // p->left = p->right = NULL;
+        
         root = p;
         return;
     }
@@ -148,33 +146,19 @@ struct Node *Delete(struct Node *p, int value)
         }
     }
 
-    // struct Node *t;
-    // if(root->right == NULL){
-    //     t = root->left;
-    //     free(root);
-    //     return(t);
-    // }else if(root->left == NULL){
-    //     t = root->right;
-    //     return(t);
-    // }
-
     return p;
 }
-
-// int* storePreorder(int n){
-
-// }
 
 int Preorderarr[1000];
 int arrindex = 0;
 
 void Preorder(struct Node *p)
 {
-    // int A[n];
+    
 
     if (p)
     {
-        // printf("%d ", p->weight);
+        
         Preorderarr[arrindex++] = p->weight;
         Preorder(p->left);
         Preorder(p->right);
@@ -185,7 +169,7 @@ void levelOrder(struct Node *p)
 {
     struct Queue q;
     create(&q, 1000);
-    // printf("%d ", p->weight);
+    
     enqueue(&q, p);
     while (!isEmpty(q))
     {
@@ -260,10 +244,6 @@ int main()
     {
         printf("\n%d", Preorderarr[index + 1]);
     }
-
-    // for(int i = 0 ; i < n ; i++){
-    //     printf("\nElements of Preorderarr are %d\n" , Preorderarr[i]);
-    // }
 
     return 0;
 }
