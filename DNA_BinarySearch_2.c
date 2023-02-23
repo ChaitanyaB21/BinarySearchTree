@@ -4,7 +4,7 @@
 
 struct Node
 {
-    // char name;
+    
     int weight;
     struct Node *left;
     struct Node *right;
@@ -27,7 +27,7 @@ void Insert(int weight)
         p->weight = weight;
         p->left = p->right = NULL;
         root = p;
-        // free(p);
+        
         return;
     }
     while (t != NULL)
@@ -102,7 +102,7 @@ int main()
         scanf("%d", &numLis[i]);
     }
 
-    // create(numLis, n);
+    
     for (int i = 0; i < n; i++)
     {
         Insert(numLis[i]);
@@ -115,18 +115,18 @@ int main()
     int index1;
     int index2;
 
-    // printf("%s" , strLis[3]);
+    
 
     for (int i = 0; i < n; i++)
     {
         if (!strcmp(strLis[i], str1)) // strcmp(strLis[i] , str1)
         {
-            // printf("\nEntered first if statement i = %d\n" , i);
+            
             index1 = i;
         }
         else if (!strcmp(strLis[i], str2))
         {
-            // printf("\nEntered second if statement i = %d\n" , i);
+            
             index2 = i;
         }
     };
@@ -135,7 +135,7 @@ int main()
         index2 = index1;
     }
 
-    printf("These are the entered indexes %d %d\n" , index1 , index2);
+//     printf("These are the entered indexes %d %d\n" , index1 , index2);
 
     int finalInt;
 
@@ -148,7 +148,7 @@ int main()
         finalInt = findAncestor(numLis[index2], numLis[index1]);
     }
 
-    // int finalInt = findAncestor(numLis[index1], numLis[index2]);
+    
     int intIndex;
     for (int i = 0; i < n; i++)
     {
@@ -159,6 +159,6 @@ int main()
     }
 
     printf("%s", strLis[intIndex]);
-    // Inorder(root);
+    
     return 0;
 }
